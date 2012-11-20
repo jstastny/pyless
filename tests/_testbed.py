@@ -29,7 +29,7 @@ class FileBasedParserTest(unittest.TestCase):
 		###
 
 		fout = open(fname+'.dot', "w")
-		fout.write('digraph {0} {{\nratio = fill;packMode=graph;\n'.format(os.path.basename(fname)[:-4].replace('-','_')))
+		fout.write('digraph {0} {{\nratio="fill";\npackMode="graph";\n'.format(os.path.basename(fname)[:-4].replace('-','_')))
 		fout.write('node [style="filled",fontname=Arial];\n')
 		def twalker(t):
 			tname = tokenNames[t.getType()]
